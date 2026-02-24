@@ -1,35 +1,30 @@
-# Exercício prático react PRW2 - 2025-2
+# Exercício Prático Frontend React | PRW2 - 2025-2
 
-> Exercício prático de React para a disciplina de PRW2 de ADS do IFSP São Carlos. Contém um backend PHP com banco de dados servindo um servidor REST e um frontend a ser desenvolvido usando react.
+📚 Sobre o Projeto
 
-### Avisos
+Este projeto foi desenvolvido como atividade prática da disciplina Programação para Web 2 (PRW2) do curso de Análise e Desenvolvimento de Sistemas – IFSP São Carlos.
 
-Este código é puramente didático e deve ser utilizado apenas como modelo inicial de desenvolvimento.
+O backend (API REST em PHP) foi disponibilizado previamente pelo professor, e a equipe foi responsável pelo desenvolvimento completo do frontend utilizando React (JSX).
 
-## 💻 Pré-requisitos
+👥 Equipe:
+-Vinicius Brito
+-Pedro Moraes
+-Matheus Farias
 
-Antes de começar, verifique que sua máquina possua:
+🔗 Endpoints Consumidos
+👤 Usuários
+-GET /usuarios
+-POST /usuarios
+-DELETE /usuarios/{id}
 
-- Docker
+📦 Produtos
+-GET /produtos
+-POST /produtos
+-PUT /produtos/{id}
+-DELETE /produtos/{id}
 
-## 🚀 Instalando
+🛒 Compras
+-POST /compras
+-DELETE /compras/{id_produto}/{id_usuario}
 
-Este projeto utiliza o Docker Compose para automatizar o processo de deploy do ambiente de desenvolvimento. Para executá-lo, no terminal, digite o seguinte comando:
-
-```
-docker compose up --build
-```
-
-## ☕ Usando
-
-Desenvolva o código-fonte do frontend react diretamente na pasta `frontend/src/`. As requisições HTTP do frontend devem ser realizadas para o endereço base `http://localhost:3000/`. As rotas disponíveis e seus propósitos são:
-
-- GET `/usuarios` - Retorna a lista de usuários cadastrados no sistema.
-- POST `/usuarios` - Cadastra um novo usuario. Deve ser enviado no corpo da requisição o parâmetro **nome** em formato json.
-- DELETE `/usuarios/<ID>` - Remove o usuário de acordo com seu ID, caso exista. Remove as compras associadas ao usuario.
-- GET `/produtos` - Retorna a lista de produtos cadastrados no sistema.
-- POST `/produtos` - Cadastra um novo produto. Deve ser enviado no corpo da requisição os parâmetros **nome** e **preco** em formato json. O **preco** deve ser um número maior que zero.
-- PUT `/produtos/<ID>` - Edita um produto existente. Deve ser enviado no corpo da requisição os parâmetros **nome** e **preco** em formato json. O **preco** deve ser um número maior que zero.
-- DELETE `/produtos/<ID>` - Remove o produto de acordo com seu ID, caso exista. Remove as compras associadas ao produto.
-- POST `/compras` - Cadastra uma nova compra produto. Deve ser enviado no corpo da requisição os parâmetros **id_produto** e **id_usuario** em formato json. Ambos **id_produto** e **id_usuario** devem ser valores válidos e devem ser únicos.
-- DELETE `/compras/<ID_PRODUTO>/<ID_USUARIO>` - Remove uma compra específica de um usuário de um produto.
+Realizada em 02/09/2025, vinculado a graduação em Análise e Desenvolvimento de Sistemas - São Carlos
